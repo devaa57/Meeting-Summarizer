@@ -1,109 +1,149 @@
-# 🎙 AI Meeting Summarizer
+# 🎙️ AI Meeting Summarizer
 
-An AI-powered meeting summarizer that converts audio into structured meeting notes using Faster Whisper and Hugging Face LLMs.
+<p align="center">
 
----
+An AI-powered Meeting Summarizer that converts meeting recordings into structured meeting notes using <b>Faster Whisper</b> and <b>Large Language Models (LLMs)</b>.
 
-## 🚀 Features
+Automatically generates:
+- 📝 Accurate Transcripts
+- ✨ AI-Corrected Transcripts
+- 📄 Meeting Summaries
+- 📌 Key Discussion Points
+- ✅ Action Items
 
-- 🎤 Audio Transcription using Faster Whisper
-- 📝 AI Transcript Correction
-- ✨ AI-generated Meeting Summary
-- 📌 Key Points Extraction
-- ✅ Action Item Detection
-- 🌍 Automatic Language Detection
-- 📄 Download Summary
-- ⚡ Fast React + Express Interface
+</p>
 
 ---
 
-## 🛠 Tech Stack
+## 📸 Application Preview
 
-### Frontend
-- React
-- Vite
-- CSS
-- Axios
-
-### Backend
-- Node.js
-- Express.js
-- Multer
-
-### AI
-- Faster Whisper
-- Hugging Face Inference API
-- Qwen 2.5 Instruct
-
-### Python
-- Faster Whisper
-- Torch
-
----
-
-## 📸 Screenshots
-
-### Home
+### 🏠 Home Page
 
 ![Home](screenshots/chrome_AsTascNndf.png)
 
 ---
 
-### Processing
+### 🎤 Upload Audio
 
-![Processing](screenshots/chrome_BYjsNwAZ73.png)
+![Upload](screenshots/chrome_BYjsNwAZ73.png)
 
 ---
 
-### Results
+### 📄 Generated Results
 
 ![Results](screenshots/chrome_eKHSNRUuXW.png)
 
 ---
 
-## 📂 Project Structure
+# ✨ Features
 
-```
-Meeting-Summarizer/
+- 🎤 Speech-to-Text using Faster Whisper
+- 🤖 AI-based Transcript Correction
+- 📝 Automatic Meeting Summaries
+- 📌 Key Point Extraction
+- ✅ Action Item Detection
+- 🌍 Automatic Language Detection
+- 📥 Download Meeting Summary
+- 📋 Copy Transcript
+- ⚡ Fast React Interface
+- 🎯 Meeting Context Support (Participants, Organization & Topic)
 
-│
+---
 
-├── frontend/
+# 🏗️ System Architecture
 
-│ ├── src/
-
-│ └── public/
-
-│
-
-├── backend/
-
-│ ├── controllers/
-
-│ ├── routes/
-
-│ ├── services/
-
-│ └── middleware/
-
-│
-
-├── transcriber/
-
-│ ├── app.py
-
-│ └── transcribe.py
-
-│
-
-└── screenshots/
+```text
+                 Audio File
+                      │
+                      ▼
+        Faster Whisper (Python)
+                      │
+             Raw Transcript
+                      │
+                      ▼
+      Hugging Face LLM (Correction)
+                      │
+        Corrected Transcript
+                      │
+                      ▼
+        Hugging Face LLM (Summary)
+                      │
+                      ▼
+     Summary • Key Points • Action Items
+                      │
+                      ▼
+            React + Express Dashboard
 ```
 
 ---
 
-## ⚙️ Installation
+# 🛠️ Tech Stack
 
-### Clone Repository
+## Frontend
+
+- React
+- Vite
+- CSS3
+- Axios
+- React Dropzone
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
+- Multer
+
+---
+
+## AI & Machine Learning
+
+- Faster Whisper
+- Hugging Face Router API
+- Qwen 2.5 Instruct
+
+---
+
+## Python
+
+- Faster Whisper
+- Torch
+
+---
+
+# 📂 Project Structure
+
+```text
+Meeting-Summarizer
+
+│
+
+├── backend
+│   ├── controllers
+│   ├── middleware
+│   ├── routes
+│   ├── services
+│   └── app.js
+│
+├── frontend
+│   ├── public
+│   ├── src
+│   └── package.json
+│
+├── transcriber
+│   ├── app.py
+│   ├── transcribe.py
+│   └── requirements.txt
+│
+└── screenshots
+```
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/devaa57/Meeting-Summarizer.git
@@ -111,7 +151,7 @@ git clone https://github.com/devaa57/Meeting-Summarizer.git
 
 ---
 
-### Backend
+## 2️⃣ Backend
 
 ```bash
 cd backend
@@ -119,15 +159,15 @@ cd backend
 npm install
 ```
 
-Create a `.env`
+Create a `.env` file:
 
 ```env
-HF_API_KEY=your_key
+HF_API_KEY=your_huggingface_api_key
 PORT=5000
 PYTHON_PATH=path_to_python
 ```
 
-Run
+Start the backend:
 
 ```bash
 npm start
@@ -135,7 +175,7 @@ npm start
 
 ---
 
-### Frontend
+## 3️⃣ Frontend
 
 ```bash
 cd frontend
@@ -147,7 +187,7 @@ npm run dev
 
 ---
 
-### Python
+## 4️⃣ Python Transcriber
 
 ```bash
 cd transcriber
@@ -155,22 +195,45 @@ cd transcriber
 pip install -r requirements.txt
 ```
 
----
-
-## 📌 Future Improvements
-
-- PDF Export
-- Speaker Diarization
-- Timestamped Transcript
-- Search Transcript
-- Dark Mode
-- Cloud Deployment
+Run the transcription service according to your setup.
 
 ---
 
-## 👨‍💻 Author
+# 📌 Workflow
+
+1. Upload an audio recording.
+2. Faster Whisper transcribes the audio.
+3. AI corrects grammar and transcription errors.
+4. AI generates:
+   - Meeting Summary
+   - Key Points
+   - Action Items
+5. Results are displayed in the dashboard.
+6. Download the generated meeting summary.
+
+---
+
+# 🚀 Future Improvements
+
+- 📄 PDF Export
+- 👥 Speaker Diarization
+- ⏱️ Timestamped Transcripts
+- 🔍 Transcript Search
+- 🌙 Dark Mode
+- ☁️ Cloud Deployment
+- 📊 Meeting Analytics Dashboard
+
+---
+
+# 👨‍💻 Author
 
 **Devanshu Nirmal**
 
 GitHub:
 https://github.com/devaa57
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
