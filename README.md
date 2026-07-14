@@ -11,6 +11,11 @@ Automatically generates:
 - 📌 Key Discussion Points
 - ✅ Action Items
 
+## 🚀 Live Demo
+
+Frontend:
+https://meeting-summarizer-pi-xxxx.vercel.app
+
 </p>
 
 ---
